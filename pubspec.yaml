@@ -1,5 +1,5 @@
 name: git_view
-description: A Very Good Project created by Very Good CLI.
+description: Git View allows you to view the git history of your repository.
 version: 1.0.0+1
 publish_to: none
 

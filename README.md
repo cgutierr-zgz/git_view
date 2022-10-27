@@ -12,26 +12,13 @@ A Very Good Project created by Very Good CLI.
 
 ## Getting Started 🚀
 
-This project contains 3 flavors:
-
-- development
-- staging
-- production
-
-To run the desired flavor either use the launch configuration in VSCode/Android Studio or use the following commands:
+To run theapp use the launch configuration in VSCode/Android Studio or use the following commands:
 
 ```sh
-# Development
-$ flutter run --flavor development --target lib/main_development.dart
-
-# Staging
-$ flutter run --flavor staging --target lib/main_staging.dart
-
-# Production
-$ flutter run --flavor production --target lib/main_production.dart
+$ flutter run --target lib/main.dart
 ```
 
-_\*Git View works on iOS, Android, Web, and Windows._
+_\*Git View works on Macos._
 
 ---
 
@@ -53,6 +40,12 @@ $ genhtml coverage/lcov.info -o coverage/
 $ open coverage/index.html
 ```
 
+Full command:
+
+```sh
+flutter test --coverage --test-randomize-ordering-seed random && genhtml coverage/lcov.info -o coverage/ && open coverage/index.html
+```
+
 ---
 
 ## Working with Translations 🌐
@@ -61,7 +54,7 @@ This project relies on [flutter_localizations][flutter_localizations_link] and f
 
 ### Adding Strings
 
-1. To add a new localizable string, open the `app_en.arb` file at `lib/l10n/arb/app_en.arb`.
+1. To add a new localizable string, open the `app_en.arb` file at `l10n/arb/app_en.arb`.
 
 ```arb
 {
@@ -92,7 +85,7 @@ This project relies on [flutter_localizations][flutter_localizations_link] and f
 3. Use the new string
 
 ```dart
-import 'package:git_view/l10n/l10n.dart';
+import 'package:git_view/core/core.dart';
 
 @override
 Widget build(BuildContext context) {
@@ -119,7 +112,7 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
 
 ### Adding Translations
 
-1. For each supported locale, add a new ARB file in `lib/l10n/arb`.
+1. For each supported locale, add a new ARB file in `l10n/arb`.
 
 ```
 ├── l10n
