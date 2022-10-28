@@ -1,6 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="development" type="FlutterRunConfigurationType" factoryName="Flutter">
     <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
+	<option name="additionalArgs" value="--dart-define=GITHUB_CLIENT_ID=YOUR_CLIENT_ID --dart-define=GITHUB_CLIENT_SECRET=YOUR_CLIENT_SECRET" />
     <method v="2" />
   </configuration>
 </component>

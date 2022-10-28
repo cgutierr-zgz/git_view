@@ -11,7 +11,9 @@
 			"program": "lib/main.dart",
 			"args": [
 				"--target",
-				"lib/main.dart"
+				"lib/main.dart",
+				"--dart-define=GITHUB_CLIENT_ID=YOUR_CLIENT_ID",
+				"--dart-define=GITHUB_CLIENT_SECRET=YOUR_CLIENT_SECRET",
 			]
 		}
 	]
