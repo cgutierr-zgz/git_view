@@ -18,7 +18,9 @@ class AppDelegate: FlutterAppDelegate {
 
         // Create a new popover and set the size and content controller
         let popover = MainFlutterWindow()
-        popover.contentSize = NSSize(width: 500, height: 400)
+		// TODO(carlito): Invesitgate on how to set the size of the popover dinaamically
+		// TODO(carlito): Investigate on how to move the popover trough the screen
+        popover.contentSize = NSSize(width: 1000, height: 500)
         popover.behavior = .transient
         let flutterViewController = FlutterViewController.init()
         RegisterGeneratedPlugins(registry: flutterViewController)
