@@ -11,6 +11,19 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return GithubLoginWidget(
       builder: (context, httpClient) {
+        //WindowToFront.activate();
+        return Scaffold(
+          appBar: AppBar(
+            title: Text(title),
+          ),
+          body: GitHubSummary(
+            gitHub: _getGitHub(httpClient.credentials.accessToken),
+          ),
+        );
+      },
+      /*
+      builder: (context, httpClient) {
+        //WindowToFront.activate();
         return FutureBuilder<CurrentUser>(
           future: viewerDetail(httpClient.credentials.accessToken),
           builder: (context, snapshot) {
@@ -29,6 +42,7 @@ class LoginPage extends StatelessWidget {
           },
         );
       },
+      */
       githubClientId: githubClientId,
       githubClientSecret: githubClientSecret,
       githubScopes: githubScopes,
@@ -39,4 +53,8 @@ class LoginPage extends StatelessWidget {
 Future<CurrentUser> viewerDetail(String accessToken) async {
   final gitHub = GitHub(auth: Authentication.withToken(accessToken));
   return gitHub.users.getCurrentUser();
+}
+
+GitHub _getGitHub(String accessToken) {
+  return GitHub(auth: Authentication.withToken(accessToken));
 }
