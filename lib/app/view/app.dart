@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:git_view/core/core.dart';
-import 'package:git_view/counter/counter.dart';
+import 'package:git_view/login/login.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -19,9 +19,11 @@ class App extends StatelessWidget {
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const CounterPage(),
+      home: const LoginPage(title: 'hey!'),
     );
   }
 }
