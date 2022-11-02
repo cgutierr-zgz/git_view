@@ -15,7 +15,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   fluttericon: ^2.0.0
-  github: ^9.5.0
+  github: ^9.6.0
   http: ^0.13.5
   intl: ^0.17.0
   oauth2: ^2.0.1
