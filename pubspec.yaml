@@ -24,7 +24,7 @@ dependencies:
   #  path: ./window_to_front
 
 dev_dependencies:
-  bloc_test: ^9.1.0
+  bloc_test: ^9.1.1
   flutter_test:
     sdk: flutter
   mocktail: ^0.3.0
